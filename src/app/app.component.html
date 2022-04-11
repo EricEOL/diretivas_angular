@@ -1,4 +1,4 @@
-<h1 class="text-success text-center">Angular - diretivas</h1>
+<h1 appMarcaTexto backgroundColor="coral" textColor="white" class="text-success text-center">Angular - diretivas</h1>
 <!-- Diretivas de Atributo -->
 <div 
   [ngStyle]="{background: count < 6 ? 'red' : 'lightgreen'}"
@@ -88,3 +88,7 @@
   >
   <h4>Saída: {{ text }}</h4>
 </div>
+
+<!-- DIRETIVA CUSTOMIZADA -->
+
+<h3 appMarcaTexto backgroundColor="red" textColor="blue" class="text-center">{{ name }}</h3>
