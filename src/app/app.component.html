@@ -10,6 +10,8 @@
 </div>
 
 <!-- Diretivas Estruturais -->
+
+<!-- IF -->
 <h2
   class="text-center"
   *ngIf="count > 7; else menor">
@@ -21,3 +23,45 @@
     O contador ainda é menor ou igual a 7
   </h2>
 </ng-template>
+
+<!-- SWITCH -->
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+  <strong>ngSWITCH</strong>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="3"
+  >
+    É igual a 3
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="5"
+  >
+    É igual a 5
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="7"
+  >
+    É igual a 7
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchDefault
+  >
+    Text default
+  </li>
+</ul>
+
+<!-- FOR -->
+
+<ul class="list-group mx-auto col-3 mt-4">
+  <strong>ngFOR</strong>
+  <li 
+    class="list-group-item"  
+    *ngFor="let person of people" 
+  >
+    {{ person.name }} {{ person.lastName }}
+  </li>
+</ul>
