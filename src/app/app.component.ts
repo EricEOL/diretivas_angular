@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
     }
   ]
 
+  name: string = "Eric Lopes";
+  
+  text: string = "";
+
   constructor() {}
 
   ngOnInit(): void {
@@ -36,6 +40,10 @@ export class AppComponent implements OnInit {
       this.count++;
       if(this.count === 10) clearInterval(interval);
     }, 1000)
+  }
+
+  click(): void {
+
   }
 
 }
