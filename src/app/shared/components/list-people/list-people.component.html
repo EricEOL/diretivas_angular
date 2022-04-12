@@ -1,0 +1,9 @@
+<ul class="list-group mx-auto col-3 mt-4">
+  <strong>Service People - Utilizando</strong>
+  <li 
+    class="list-group-item"  
+    *ngFor="let person of people" 
+  >
+    {{ person.firstName }} {{ person.lastName }} | idade: {{ person.age }}
+  </li>
+</ul>
