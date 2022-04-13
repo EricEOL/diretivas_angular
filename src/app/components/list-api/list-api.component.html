@@ -1,8 +1,8 @@
 <section class="d-flex align-items-center justify-content-center flex-wrap">
-  <div class="card mx-2 my-2" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+  <div *ngFor="let char of characters" class="card mx-2 my-2" style="width: 18rem;">
+    <img class="card-img-top" [src]="char.image" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">{{char.name}}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
     <ul class="list-group list-group-flush">

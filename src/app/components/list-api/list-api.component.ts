@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListService } from 'src/app/shared/services/list.service';
 
 @Component({
   selector: 'app-list-api',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListApiComponent implements OnInit {
 
-  constructor() { }
+  characters: any[] = [];
+
+  constructor(private listService: ListService) { }
 
   ngOnInit(): void {
+    this.getList();
   }
 
+  getList(): void {
+    this.listService.getList().subscribe(characters => this.characters = characters.results);
+  }
 }
